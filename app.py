@@ -6,6 +6,7 @@ import io
 import csv
 import streamlit as st
 from google.cloud import vision
+from google.oauth2 import service_account
 
 credentials_info = st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]
 
