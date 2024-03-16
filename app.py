@@ -7,7 +7,13 @@ import csv
 import streamlit as st
 from google.cloud import vision
 
-client = vision.ImageAnnotatorClient()
+credentials_info = st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]
+
+# 認証情報を用いてCredentialsオブジェクトを作成
+credentials = service_account.Credentials.from_service_account_info(credentials_info)
+
+# Credentialsを使ってVision APIのクライアントを初期化
+client = vision.ImageAnnotatorClient(credentials=credentials)
 
 pattern_dict = {}
 pattern_dict["serial"]   = 'Serial #:.*'
