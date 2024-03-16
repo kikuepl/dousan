@@ -7,8 +7,6 @@ import csv
 import streamlit as st
 from google.cloud import vision
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ts-trace-cloud-915257cd885b.json'
-
 client = vision.ImageAnnotatorClient()
 
 pattern_dict = {}
