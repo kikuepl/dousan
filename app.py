@@ -117,6 +117,7 @@ def vision_img(input_file):
 input_file = st.file_uploader("画像をアップロードしてください", type=['jpg', 'jpeg'])
 
 if input_file:
+    st.image(input_file)
     record = vision_img(input_file)
 
     remaining_string_list0_record, remaining_string_list1_record = record[0], record[1]
