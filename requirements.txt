@@ -3,3 +3,4 @@ pandas
 streamlit
 google-cloud-vision
 protobuf==3.20.1
+openai
